@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+header {
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    flex-direction: row;
+}
+.scoreboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.playerScoreboard, .cpuScoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
