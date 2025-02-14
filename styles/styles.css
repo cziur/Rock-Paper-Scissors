@@ -2,20 +2,60 @@
     box-sizing: border-box;
     margin: 0;
 }
+body {
+    background-color: brown;
+}
 header {
     display: flex;
-    height: 400px;
-    justify-content: center;
+    height: 200px;
+    justify-content: space-evenly;
     flex-direction: row;
 }
 .scoreboard {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    width: 100%;
 }
 .playerScoreboard, .cpuScoreboard {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
+main {
+    height: 350px;
+    display: flex;
+    align-items: center;
+}
+.actionButtons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.rock, .paper, .scissors {
+    height: 48px;
+    width: 128px;
+    color: aqua;
+    background-color: black;
+    transition: background-color .25s;
+}
+.rock:hover, .paper:hover, .scissors:hover {
+    background-color: aliceblue;
+}
+.rock:focus,
+.rock:active,
+.paper:focus,
+.paper:active,
+.scissors:focus,
+.scissors:active, {
+  background-color: black;
+  transition: none;
 }
