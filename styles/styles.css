@@ -29,8 +29,14 @@ section {
     flex-direction: row;
     align-items: center;
 }
+.round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
 main {
-    height: 350px;
+    height: 200px;
     display: flex;
     align-items: center;
 }
@@ -40,7 +46,7 @@ main {
     align-items: center;
     width: 100%;
 }
-.rock, .paper, .scissors {
+button {
     height: 48px;
     width: 128px;
     color: aqua;
@@ -58,4 +64,14 @@ main {
 .scissors:active, {
   background-color: black;
   transition: none;
+}
+.winner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

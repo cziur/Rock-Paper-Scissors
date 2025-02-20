@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
-    <script src="./scripts/main.js"></script>
     <title>Rock, Paper, Scissors!</title>
 </head>
 <body>
@@ -12,11 +11,11 @@
         <div class="scoreboard">
             <div class="playerScoreboard">
         <h1>Player Score</h1>
-        <h2>0</h2>
+        <h2 class="playerCount">0</h2>
             </div>
             <div class="cpuScoreboard">
         <h1>Computer Score</h1>
-        <h2>0</h2>
+        <h2 class="computerCount">0</h2>
             </div>
         </div>
     </header>
@@ -24,6 +23,9 @@
         <h3>Player Picked:</h3>
         <h3>CPU Picked:</h3>
     </section>
+    <div class="round">
+        <h4 class="roundText">Round:</h4>
+    </div>
     <main>
         <div class="actionButtons">
             <button class="rock" type="button">Rock</button>
@@ -31,7 +33,16 @@
             <button class="scissors" type="button">Scissors</button> 
         </div>
     </main>
+    <div class="winner">
+        <h5 class="winner"></h5>
+        <h5 class="gameWinner"></h5>
+    </div>
+    <div class="reset">
+        <button class="resetButton" type="button">Play Again</button>
+    </div>
 </body>
+<script src="./scripts/main.js"></script>
+
 </html>
 <!-- Ideas -->
  <!-- After every match, award a new item to use in the next round (knife, gun, pitchfork, etc) -->
