@@ -53,7 +53,7 @@ button {
     background-color: black;
     transition: background-color .25s;
 }
-.rock:hover, .paper:hover, .scissors:hover {
+.rock:hover, .paper:hover, .scissors:hover, .resetButton:hover {
     background-color: aliceblue;
 }
 .rock:focus,
@@ -61,7 +61,9 @@ button {
 .paper:focus,
 .paper:active,
 .scissors:focus,
-.scissors:active, {
+.scissors:active,
+.resetButton:focus,
+.resetButton:active {
   background-color: black;
   transition: none;
 }
