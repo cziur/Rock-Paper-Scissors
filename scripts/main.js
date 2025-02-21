@@ -32,19 +32,27 @@ function winner(player,computer) {
     const result = document.querySelector('.gameWinner');
     const playerCount = document.querySelector('.playerCount');
     const computerCount = document.querySelector('.computerCount');
+    const playerPick = document.querySelector('.playerPick')
+    const computerPick = document.querySelector('.computerPick')
     player = player.toLowerCase();
     computer = computer.toLowerCase();
     if (player === computer) {
         result.textContent = 'Tie!'
+        playerPick.textContent = `${player}`
+        computerPick.textContent = `${computer}`
     } else if (player == 'rock') {
         if (computer == 'paper') {
             result.textContent = 'Paper beats rock, computer wins!'
             computerScore++
             computerCount.textContent = computerScore
+            playerPick.textContent = `${player}`
+            computerPick.textContent = `${computer}`
         } else {
             result.textContent = 'Rock beats scissors, player wins!'
             playerScore++;
             playerCount.textContent = playerScore
+            playerPick.textContent = `${player}`
+            computerPick.textContent = `${computer}`
         }
     }
     else if (player == 'scissors') {
@@ -52,10 +60,14 @@ function winner(player,computer) {
             result.textContent = 'Rock beats scissors, computer wins!';
             computerScore++;
             computerCount.textContent = computerScore;
+            playerPick.textContent = `${player}`
+            computerPick.textContent = `${computer}`
         } else {
             result.textContent = 'Scissors beats paper, player wins!';
             playerScore++;
             playerCount.textContent = playerScore;
+            playerPick.textContent = `${player}`
+            computerPick.textContent = `${computer}`
         }
     }
     else if (player == 'paper') {
@@ -63,8 +75,12 @@ function winner(player,computer) {
             result.textContent = 'Scissors beats paper, computer wins!'
             computerScore++;
             computerCount.textContent = computerScore;
+            playerPick.textContent = `${player}`
+            computerPick.textContent = `${computer}`
         } else {
             result.textContent = 'Paper beats rock, player wins!'
+            playerPick.textContent = `${player}`
+            computerPick.textContent = `${computer}`
         }
     }
 }
