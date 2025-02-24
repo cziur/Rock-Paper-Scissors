@@ -22,7 +22,7 @@ function playGame() {
 
             winner(this.innerText, computerChoice)
 
-            if (rounds == 10) {
+            if (rounds === 10) {
                 gameOver(playerChoices, round);
             };
         });
@@ -32,8 +32,8 @@ function winner(player,computer) {
     const result = document.querySelector('.gameWinner');
     const playerCount = document.querySelector('.playerCount');
     const computerCount = document.querySelector('.computerCount');
-    const playerPick = document.querySelector('.playerPick')
-    const computerPick = document.querySelector('.computerPick')
+    const playerPick = document.querySelector('.playerPick');
+    const computerPick = document.querySelector('.computerPick');
     player = player.toLowerCase();
     computer = computer.toLowerCase();
     if (player === computer) {
@@ -84,17 +84,16 @@ function winner(player,computer) {
         }
     }
 }
-function endGame(playerChoices, Rounds) {
+function gameOver(playerChoices, Rounds) {
     const winner = document.querySelector('.winner');
-    const result = document.querySelector('.result');
+    const result = document.querySelector('.gameWinner');
     const reset = document.querySelector('.resetButton');
     
     playerChoices.forEach(choice => {
         choice.style.display = 'none';
     })
-
+    
     winner.innerText = 'Game Over!!!'
-    rounds.style.display = 'none';
 
     if (playerScore > computerScore) {
         result.style.fontSize = '2rem';
