@@ -86,24 +86,21 @@ function winner(player,computer) {
 }
 function gameOver(playerChoices, Rounds) {
     const winner = document.querySelector('.winner');
-    const result = document.querySelector('.gameWinner');
     const reset = document.querySelector('.resetButton');
     
     playerChoices.forEach(choice => {
         choice.style.display = 'none';
     })
-    
-    winner.innerText = 'Game Over!!!'
 
     if (playerScore > computerScore) {
-        result.style.fontSize = '2rem';
-        result.innerText = 'You win!'
+        winner.style.fontSize = '2rem';
+        winner.innerText = 'You win!'
     } else if (playerScore < computerScore) {
-        result.style.fontSize = '2rem';
-        result.innerText = 'You lose'
+        winner.style.fontSize = '2rem';
+        winner.innerText = 'You lose'
     } else {
-        result.style.fontSize = '2rem'
-        result.innerText = 'Tie Game'
+        winner.style.fontSize = '2rem'
+        winner.innerText = 'Tie Game'
     }
     reset.addEventListener('click', () => {
         window.location.reload();
